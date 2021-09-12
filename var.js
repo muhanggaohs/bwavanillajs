@@ -1,5 +1,4 @@
-const iceCream = 6 % 3;
+const sayaSukaEsKrim = "sangat suka";
+const sayaSukaHamburger = "suka kali";
 
-if(iceCream == 2)
-console.log(iceCream);
-else console.log("iceCream tidak sama dengan 2");
+console.log(`${sayaSukaEsKrim} ${sayaSukaHamburger}`);
