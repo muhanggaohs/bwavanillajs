@@ -47,16 +47,17 @@ console.log(anchestor);
 
 function renderAnchestor(node, depth = 0) {
     let inheritance = "",
-        space="";
+        space   = "";
 
     for (let i = 0; i < depth; i++) {
-        inheritance += "-";
+        inheritance += "─";
+        space += " ";
     }
 
-    node.forEach(function(item){
-        console.log(`${depth > 0 ? "└" + inheritance + "" : ""}${item.name}`);
-
-        if(item.child) renderAnchestor(item.child, (depth +=1));
+    node.forEach(function (item) {
+        console.log(`${depth > 0 ? space + "└" + inheritance + "" : ""}${item.name}`)
+        
+        if (item.child) renderAnchestor(item.child, (depth += 1));
     });
 }
 
